@@ -4,3 +4,9 @@ rvm:
 
 notifications:
   slack: titansoft:5EziUOz2eXleqyFgPjTlP92k
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: "ca350b6f-85df-4b10-a543-9626460121bc"
+  app: simplebet
