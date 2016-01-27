@@ -1,1 +1,24 @@
-<h1>New Event</h1>
+<%= form_for :event do |f| %>
+  <p>
+    <%= f.label :home %><br>
+    <%= f.select :home, [['Chelsea','Chelsea'],['Manchester United','ManchesterUnited'],['Liverpool','Liverpool']] %>
+  </p>
+
+  <p>
+    <%= f.label :away %><br>
+    <%= f.select :away, [['Chelsea','Chelsea'],['Manchester United','ManchesterUnited'],['Liverpool','Liverpool']] %>
+  </p>
+
+  <p>
+    <%= f.datetime_select :eventdate%>
+  </p>
+
+  <p>
+    <%= f.label :status %><br>
+    <%= f.select :status, [['Running','Running'],['Closed','Closed']] %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
