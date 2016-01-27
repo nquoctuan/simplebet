@@ -1,0 +1,19 @@
+<h1>Listing Events</h1>
+<%= link_to 'New Event', new_event_path %>
+<table>
+  <tr>
+    <th>Event Date</th>
+    <th>Home</th>
+    <th>Away</th>
+    <th>Status</th>
+  </tr>
+
+  <% @events.each do |event| %>
+    <tr>
+      <td><%= event.eventdate %></td>
+      <td><%= event.home %></td>
+      <td><%= event.away %></td>
+      <td><%= event.status %></td>
+    </tr>
+  <% end %>
+</table>
